@@ -26,7 +26,7 @@ Package ui provides abstract foundations and helper utilities for building Tako 
 
 
 <a name="BaseAdapter"></a>
-## type [BaseAdapter](<https://github.com/GetTako/tako/blob/main/pkg/adapter/ui/adapter.go#L17-L22>)
+## type [BaseAdapter](<https://github.com/takoterm/tako/blob/main/pkg/adapter/ui/adapter.go#L17-L22>)
 
 BaseAdapter is a generic base struct that holds core dependencies and provides common helper methods for building custom Tako UI adapters.
 
@@ -40,7 +40,7 @@ type BaseAdapter struct {
 ```
 
 <a name="NewBaseAdapter"></a>
-### func [NewBaseAdapter](<https://github.com/GetTako/tako/blob/main/pkg/adapter/ui/adapter.go#L25>)
+### func [NewBaseAdapter](<https://github.com/takoterm/tako/blob/main/pkg/adapter/ui/adapter.go#L25>)
 
 ```go
 func NewBaseAdapter(ctx *tako.Context) *BaseAdapter
@@ -49,7 +49,7 @@ func NewBaseAdapter(ctx *tako.Context) *BaseAdapter
 NewBaseAdapter creates a new BaseAdapter instance.
 
 <a name="BaseAdapter.FlushEvents"></a>
-### func \(\*BaseAdapter\) [FlushEvents](<https://github.com/GetTako/tako/blob/main/pkg/adapter/ui/adapter.go#L80>)
+### func \(\*BaseAdapter\) [FlushEvents](<https://github.com/takoterm/tako/blob/main/pkg/adapter/ui/adapter.go#L80>)
 
 ```go
 func (b *BaseAdapter) FlushEvents() []contracts.Event
@@ -58,7 +58,7 @@ func (b *BaseAdapter) FlushEvents() []contracts.Event
 FlushEvents retrieves and clears all accumulated events from the Event Bus. UI adapters should call this in their render tick or event loop to respond to state changes.
 
 <a name="BaseAdapter.HandleKey"></a>
-### func \(\*BaseAdapter\) [HandleKey](<https://github.com/GetTako/tako/blob/main/pkg/adapter/ui/adapter.go#L63>)
+### func \(\*BaseAdapter\) [HandleKey](<https://github.com/takoterm/tako/blob/main/pkg/adapter/ui/adapter.go#L63>)
 
 ```go
 func (b *BaseAdapter) HandleKey(key string) bool
@@ -67,7 +67,7 @@ func (b *BaseAdapter) HandleKey(key string) bool
 HandleKey routes terminal key presses directly to the logical Key Router.
 
 <a name="BaseAdapter.HandleMouseEvent"></a>
-### func \(\*BaseAdapter\) [HandleMouseEvent](<https://github.com/GetTako/tako/blob/main/pkg/adapter/ui/adapter.go#L71>)
+### func \(\*BaseAdapter\) [HandleMouseEvent](<https://github.com/takoterm/tako/blob/main/pkg/adapter/ui/adapter.go#L71>)
 
 ```go
 func (b *BaseAdapter) HandleMouseEvent(px, py int, event router.MouseEventType) bool
@@ -76,7 +76,7 @@ func (b *BaseAdapter) HandleMouseEvent(px, py int, event router.MouseEventType) 
 HandleMouseEvent routes a mouse event at position \(px, py\) to the Mouse Router.
 
 <a name="BaseAdapter.InitProfiler"></a>
-### func \(\*BaseAdapter\) [InitProfiler](<https://github.com/GetTako/tako/blob/main/pkg/adapter/ui/adapter.go#L42>)
+### func \(\*BaseAdapter\) [InitProfiler](<https://github.com/takoterm/tako/blob/main/pkg/adapter/ui/adapter.go#L42>)
 
 ```go
 func (b *BaseAdapter) InitProfiler()
@@ -85,7 +85,7 @@ func (b *BaseAdapter) InitProfiler()
 InitProfiler resolves the profiler dynamically from the service container. This must be called inside the adapter's event loop \(e.g. Render/Init\) because the framework only boots the profiler after adapters are registered.
 
 <a name="BaseAdapter.RecordUpdate"></a>
-### func \(\*BaseAdapter\) [RecordUpdate](<https://github.com/GetTako/tako/blob/main/pkg/adapter/ui/adapter.go#L49>)
+### func \(\*BaseAdapter\) [RecordUpdate](<https://github.com/takoterm/tako/blob/main/pkg/adapter/ui/adapter.go#L49>)
 
 ```go
 func (b *BaseAdapter) RecordUpdate(dur time.Duration)
@@ -94,7 +94,7 @@ func (b *BaseAdapter) RecordUpdate(dur time.Duration)
 RecordUpdate logs the duration of an Update cycle if profiler is enabled.
 
 <a name="BaseAdapter.RecordView"></a>
-### func \(\*BaseAdapter\) [RecordView](<https://github.com/GetTako/tako/blob/main/pkg/adapter/ui/adapter.go#L56>)
+### func \(\*BaseAdapter\) [RecordView](<https://github.com/takoterm/tako/blob/main/pkg/adapter/ui/adapter.go#L56>)
 
 ```go
 func (b *BaseAdapter) RecordView(dur time.Duration)
@@ -103,7 +103,7 @@ func (b *BaseAdapter) RecordView(dur time.Duration)
 RecordView logs the duration of a View cycle if profiler is enabled.
 
 <a name="BaseAdapter.StartEventLoop"></a>
-### func \(\*BaseAdapter\) [StartEventLoop](<https://github.com/GetTako/tako/blob/main/pkg/adapter/ui/adapter.go#L92>)
+### func \(\*BaseAdapter\) [StartEventLoop](<https://github.com/takoterm/tako/blob/main/pkg/adapter/ui/adapter.go#L92>)
 
 ```go
 func (b *BaseAdapter) StartEventLoop(ctx context.Context, interval time.Duration, onEvents func(events []contracts.Event)) func()

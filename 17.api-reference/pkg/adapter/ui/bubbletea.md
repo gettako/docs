@@ -25,7 +25,7 @@ Package bubbletea provides functionality for the Tako framework.
 
 
 <a name="Adapter"></a>
-## type [Adapter](<https://github.com/GetTako/tako/blob/main/pkg/adapter/ui/bubbletea/adapter.go#L141-L144>)
+## type [Adapter](<https://github.com/takoterm/tako/blob/main/pkg/adapter/ui/bubbletea/adapter.go#L141-L144>)
 
 Adapter implements contracts.UIRenderer
 
@@ -36,7 +36,7 @@ type Adapter struct {
 ```
 
 <a name="NewAdapter"></a>
-### func [NewAdapter](<https://github.com/GetTako/tako/blob/main/pkg/adapter/ui/bubbletea/adapter.go#L147>)
+### func [NewAdapter](<https://github.com/takoterm/tako/blob/main/pkg/adapter/ui/bubbletea/adapter.go#L147>)
 
 ```go
 func NewAdapter(ctx *tako.Context, layout Layout) *Adapter
@@ -45,7 +45,7 @@ func NewAdapter(ctx *tako.Context, layout Layout) *Adapter
 NewAdapter creates a new Bubble Tea adapter.
 
 <a name="Adapter.Render"></a>
-### func \(\*Adapter\) [Render](<https://github.com/GetTako/tako/blob/main/pkg/adapter/ui/bubbletea/adapter.go#L184>)
+### func \(\*Adapter\) [Render](<https://github.com/takoterm/tako/blob/main/pkg/adapter/ui/bubbletea/adapter.go#L184>)
 
 ```go
 func (a *Adapter) Render() error
@@ -54,7 +54,7 @@ func (a *Adapter) Render() error
 Render starts the Bubble Tea program.
 
 <a name="Adapter.Stop"></a>
-### func \(\*Adapter\) [Stop](<https://github.com/GetTako/tako/blob/main/pkg/adapter/ui/bubbletea/adapter.go#L190>)
+### func \(\*Adapter\) [Stop](<https://github.com/takoterm/tako/blob/main/pkg/adapter/ui/bubbletea/adapter.go#L190>)
 
 ```go
 func (a *Adapter) Stop() error
@@ -63,7 +63,7 @@ func (a *Adapter) Stop() error
 Stop gracefully shuts down the Bubble Tea program.
 
 <a name="DefaultLayout"></a>
-## type [DefaultLayout](<https://github.com/GetTako/tako/blob/main/pkg/adapter/ui/bubbletea/default_layout.go#L12>)
+## type [DefaultLayout](<https://github.com/takoterm/tako/blob/main/pkg/adapter/ui/bubbletea/default_layout.go#L12>)
 
 DefaultLayout provides a standard, UI\-agnostic layout for Tako applications running on the BubbleTea adapter. It automatically fetches the base layer and composites any active overlays on top, centering them on the screen.
 
@@ -72,7 +72,7 @@ type DefaultLayout struct{}
 ```
 
 <a name="NewDefaultLayout"></a>
-### func [NewDefaultLayout](<https://github.com/GetTako/tako/blob/main/pkg/adapter/ui/bubbletea/default_layout.go#L15>)
+### func [NewDefaultLayout](<https://github.com/takoterm/tako/blob/main/pkg/adapter/ui/bubbletea/default_layout.go#L15>)
 
 ```go
 func NewDefaultLayout() *DefaultLayout
@@ -81,7 +81,7 @@ func NewDefaultLayout() *DefaultLayout
 NewDefaultLayout creates a new DefaultLayout.
 
 <a name="DefaultLayout.View"></a>
-### func \(\*DefaultLayout\) [View](<https://github.com/GetTako/tako/blob/main/pkg/adapter/ui/bubbletea/default_layout.go#L21>)
+### func \(\*DefaultLayout\) [View](<https://github.com/takoterm/tako/blob/main/pkg/adapter/ui/bubbletea/default_layout.go#L21>)
 
 ```go
 func (l *DefaultLayout) View(ctx *tako.Context) tea.View
@@ -90,7 +90,7 @@ func (l *DefaultLayout) View(ctx *tako.Context) tea.View
 View implements the Layout interface. It queries the framework's hooks for the base layer and any active overlays, then composites them using lipgloss.
 
 <a name="Layout"></a>
-## type [Layout](<https://github.com/GetTako/tako/blob/main/pkg/adapter/ui/bubbletea/adapter.go#L16-L18>)
+## type [Layout](<https://github.com/takoterm/tako/blob/main/pkg/adapter/ui/bubbletea/adapter.go#L16-L18>)
 
 Layout is the interface that developers implement to provide a custom UI layout. This allows the adapter to handle the Bubble Tea event loop, bus, and FPS ticks automatically.
 

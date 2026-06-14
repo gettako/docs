@@ -129,7 +129,7 @@ const (
 ```
 
 <a name="Cache"></a>
-## type [Cache](<https://github.com/GetTako/tako/blob/main/contracts/cache.go#L9-L39>)
+## type [Cache](<https://github.com/takoterm/tako/blob/main/contracts/cache.go#L9-L39>)
 
 Cache defines the interface for a TTL\-based key\-value cache.
 
@@ -170,7 +170,7 @@ type Cache interface {
 ```
 
 <a name="Component"></a>
-## type [Component](<https://github.com/GetTako/tako/blob/main/contracts/component.go#L57-L71>)
+## type [Component](<https://github.com/takoterm/tako/blob/main/contracts/component.go#L57-L71>)
 
 Component bundles a UI view and its keybindings into a self\-contained, self\-describing unit. Registering a Component via app.Overlay\(\).Register\(c\) automatically wires the render hook, zone keybindings, and stack management.
 
@@ -211,7 +211,7 @@ type Component interface {
 ```
 
 <a name="Config"></a>
-## type [Config](<https://github.com/GetTako/tako/blob/main/contracts/config.go#L5-L10>)
+## type [Config](<https://github.com/takoterm/tako/blob/main/contracts/config.go#L5-L10>)
 
 Config defines the interface for the framework's configuration system.
 
@@ -225,7 +225,7 @@ type Config interface {
 ```
 
 <a name="Container"></a>
-## type [Container](<https://github.com/GetTako/tako/blob/main/contracts/container.go#L5-L31>)
+## type [Container](<https://github.com/takoterm/tako/blob/main/contracts/container.go#L5-L31>)
 
 Container defines the interface for the Inversion of Control \(IoC\) Service Container.
 
@@ -260,7 +260,7 @@ type Container interface {
 ```
 
 <a name="DebugServer"></a>
-## type [DebugServer](<https://github.com/GetTako/tako/blob/main/contracts/debug.go#L9-L14>)
+## type [DebugServer](<https://github.com/takoterm/tako/blob/main/contracts/debug.go#L9-L14>)
 
 DebugServer is the interface for the framework's optional debug/profiling HTTP server. It is implemented by internal/debug/debugger.Server and registered in the IoC container so that the TUI kernel and other consumers remain decoupled from the concrete type.
 
@@ -274,7 +274,7 @@ type DebugServer interface {
 ```
 
 <a name="DialogService"></a>
-## type [DialogService](<https://github.com/GetTako/tako/blob/main/contracts/dialog.go#L21-L35>)
+## type [DialogService](<https://github.com/takoterm/tako/blob/main/contracts/dialog.go#L21-L35>)
 
 DialogService provides common interaction primitives as specialized overlays. Dialogs are UI\-agnostic: the framework handles key routing and event emission; your layout handles the visual display via hooks.
 
@@ -314,7 +314,7 @@ type DialogService interface {
 ```
 
 <a name="Event"></a>
-## type [Event](<https://github.com/GetTako/tako/blob/main/contracts/bus.go#L7-L10>)
+## type [Event](<https://github.com/takoterm/tako/blob/main/contracts/bus.go#L7-L10>)
 
 Event represents a system event.
 
@@ -326,7 +326,7 @@ type Event struct {
 ```
 
 <a name="EventBus"></a>
-## type [EventBus](<https://github.com/GetTako/tako/blob/main/contracts/bus.go#L16-L35>)
+## type [EventBus](<https://github.com/takoterm/tako/blob/main/contracts/bus.go#L16-L35>)
 
 EventBus defines the interface for asynchronous communication between plugins.
 
@@ -354,7 +354,7 @@ type EventBus interface {
 ```
 
 <a name="EventHandler"></a>
-## type [EventHandler](<https://github.com/GetTako/tako/blob/main/contracts/bus.go#L13>)
+## type [EventHandler](<https://github.com/takoterm/tako/blob/main/contracts/bus.go#L13>)
 
 EventHandler is a function that handles an event.
 
@@ -363,7 +363,7 @@ type EventHandler func(event Event)
 ```
 
 <a name="EventQueue"></a>
-## type [EventQueue](<https://github.com/GetTako/tako/blob/main/contracts/bus.go#L40-L42>)
+## type [EventQueue](<https://github.com/takoterm/tako/blob/main/contracts/bus.go#L40-L42>)
 
 EventQueue is an internal interface for adapters that need to drain the event queue on each render tick. It is not part of the public EventBus API and should not be used by plugins or application code.
 
@@ -374,7 +374,7 @@ type EventQueue interface {
 ```
 
 <a name="JobBuilder"></a>
-## type [JobBuilder](<https://github.com/GetTako/tako/blob/main/contracts/scheduler.go#L15-L21>)
+## type [JobBuilder](<https://github.com/takoterm/tako/blob/main/contracts/scheduler.go#L15-L21>)
 
 JobBuilder provides a fluent API to hook into a dispatched job's lifecycle.
 
@@ -389,7 +389,7 @@ type JobBuilder interface {
 ```
 
 <a name="JobResult"></a>
-## type [JobResult](<https://github.com/GetTako/tako/blob/main/contracts/scheduler.go#L9-L12>)
+## type [JobResult](<https://github.com/takoterm/tako/blob/main/contracts/scheduler.go#L9-L12>)
 
 JobResult represents the outcome of a dispatched background job.
 
@@ -401,7 +401,7 @@ type JobResult struct {
 ```
 
 <a name="KVStore"></a>
-## type [KVStore](<https://github.com/GetTako/tako/blob/main/contracts/storage.go#L5-L20>)
+## type [KVStore](<https://github.com/takoterm/tako/blob/main/contracts/storage.go#L5-L20>)
 
 KVStore defines the interface for a Key\-Value storage mechanism.
 
@@ -425,7 +425,7 @@ type KVStore interface {
 ```
 
 <a name="KeyManager"></a>
-## type [KeyManager](<https://github.com/GetTako/tako/blob/main/contracts/component.go#L10-L24>)
+## type [KeyManager](<https://github.com/takoterm/tako/blob/main/contracts/component.go#L10-L24>)
 
 KeyManager is a subset of the key\-registration API exposed to a Component's RegisterKeys method. It allows a Component to declare its own keybindings without receiving the full internal Router, keeping the Component interface clean and testable.
 
@@ -450,7 +450,7 @@ type KeyManager interface {
 ```
 
 <a name="LangManager"></a>
-## type [LangManager](<https://github.com/GetTako/tako/blob/main/contracts/i18n.go#L6-L21>)
+## type [LangManager](<https://github.com/takoterm/tako/blob/main/contracts/i18n.go#L6-L21>)
 
 LangManager defines the internationalization \(i18n\) service.
 
@@ -474,7 +474,7 @@ type LangManager interface {
 ```
 
 <a name="Logger"></a>
-## type [Logger](<https://github.com/GetTako/tako/blob/main/contracts/logger.go#L5-L24>)
+## type [Logger](<https://github.com/takoterm/tako/blob/main/contracts/logger.go#L5-L24>)
 
 Logger defines the interface for the framework's logging system.
 
@@ -502,7 +502,7 @@ type Logger interface {
 ```
 
 <a name="MouseComponent"></a>
-## type [MouseComponent](<https://github.com/GetTako/tako/blob/main/contracts/component.go#L110-L113>)
+## type [MouseComponent](<https://github.com/takoterm/tako/blob/main/contracts/component.go#L110-L113>)
 
 MouseComponent is an optional extension of [Component](<#Component>) for components that want to declare mouse zones and handlers. The overlay manager will call RegisterMouse when wiring the component if it implements this interface.
 
@@ -524,7 +524,7 @@ type MouseComponent interface {
 ```
 
 <a name="MouseManager"></a>
-## type [MouseManager](<https://github.com/GetTako/tako/blob/main/contracts/component.go#L78-L86>)
+## type [MouseManager](<https://github.com/takoterm/tako/blob/main/contracts/component.go#L78-L86>)
 
 MouseManager is a subset of the mouse\-registration API exposed to a component's RegisterMouse method. It allows a Component to declare its own mouse zones and handlers without receiving the full internal MouseRegistry.
 
@@ -543,7 +543,7 @@ type MouseManager interface {
 ```
 
 <a name="NativeComponent"></a>
-## type [NativeComponent](<https://github.com/GetTako/tako/blob/main/contracts/component.go#L121-L124>)
+## type [NativeComponent](<https://github.com/takoterm/tako/blob/main/contracts/component.go#L121-L124>)
 
 NativeComponent is an optional extension of [Component](<#Component>) for components that need to process low\-level framework events \(such as tea.Msg in BubbleTea\) that are not captured by the Router or need to be processed natively.
 
@@ -557,7 +557,7 @@ type NativeComponent interface {
 ```
 
 <a name="OverlayStack"></a>
-## type [OverlayStack](<https://github.com/GetTako/tako/blob/main/contracts/ui.go#L6-L9>)
+## type [OverlayStack](<https://github.com/takoterm/tako/blob/main/contracts/ui.go#L6-L9>)
 
 OverlayStack is a minimal interface for pushing and popping overlay layers. It is used internally by dialog.Service to avoid depending on the full UIManager.
 
@@ -569,7 +569,7 @@ type OverlayStack interface {
 ```
 
 <a name="RPCBus"></a>
-## type [RPCBus](<https://github.com/GetTako/tako/blob/main/contracts/rpc.go#L44-L49>)
+## type [RPCBus](<https://github.com/takoterm/tako/blob/main/contracts/rpc.go#L44-L49>)
 
 RPCBus defines the interface for synchronized inter\-plugin communication.
 
@@ -583,7 +583,7 @@ type RPCBus interface {
 ```
 
 <a name="RPCCaller"></a>
-## type [RPCCaller](<https://github.com/GetTako/tako/blob/main/contracts/rpc.go#L32-L41>)
+## type [RPCCaller](<https://github.com/takoterm/tako/blob/main/contracts/rpc.go#L32-L41>)
 
 RPCCaller provides a fluent API to make an RPC request.
 
@@ -601,7 +601,7 @@ type RPCCaller interface {
 ```
 
 <a name="RPCHandler"></a>
-## type [RPCHandler](<https://github.com/GetTako/tako/blob/main/contracts/rpc.go#L19>)
+## type [RPCHandler](<https://github.com/takoterm/tako/blob/main/contracts/rpc.go#L19>)
 
 RPCHandler is a function that processes an RPC request.
 
@@ -610,7 +610,7 @@ type RPCHandler func(ctx context.Context, req RPCRequest) (RPCResponse, error)
 ```
 
 <a name="RPCRequest"></a>
-## type [RPCRequest](<https://github.com/GetTako/tako/blob/main/contracts/rpc.go#L9-L11>)
+## type [RPCRequest](<https://github.com/takoterm/tako/blob/main/contracts/rpc.go#L9-L11>)
 
 RPCRequest represents an incoming payload to an RPC handler.
 
@@ -621,7 +621,7 @@ type RPCRequest struct {
 ```
 
 <a name="RPCResponse"></a>
-## type [RPCResponse](<https://github.com/GetTako/tako/blob/main/contracts/rpc.go#L14-L16>)
+## type [RPCResponse](<https://github.com/takoterm/tako/blob/main/contracts/rpc.go#L14-L16>)
 
 RPCResponse represents an outgoing payload from an RPC handler.
 
@@ -632,7 +632,7 @@ type RPCResponse struct {
 ```
 
 <a name="RPCRouter"></a>
-## type [RPCRouter](<https://github.com/GetTako/tako/blob/main/contracts/rpc.go#L22-L29>)
+## type [RPCRouter](<https://github.com/takoterm/tako/blob/main/contracts/rpc.go#L22-L29>)
 
 RPCRouter provides a fluent API to register an RPC endpoint.
 
@@ -648,7 +648,7 @@ type RPCRouter interface {
 ```
 
 <a name="Recorder"></a>
-## type [Recorder](<https://github.com/GetTako/tako/blob/main/contracts/recorder.go#L6-L25>)
+## type [Recorder](<https://github.com/takoterm/tako/blob/main/contracts/recorder.go#L6-L25>)
 
 Recorder provides a fluent API for event and state "time\-travel" recording.
 
@@ -676,7 +676,7 @@ type Recorder interface {
 ```
 
 <a name="Scheduler"></a>
-## type [Scheduler](<https://github.com/GetTako/tako/blob/main/contracts/scheduler.go#L24-L47>)
+## type [Scheduler](<https://github.com/takoterm/tako/blob/main/contracts/scheduler.go#L24-L47>)
 
 Scheduler defines a background task runner that safely bridges concurrency with the TUI.
 
@@ -708,7 +708,7 @@ type Scheduler interface {
 ```
 
 <a name="StateChangedEvent"></a>
-## type [StateChangedEvent](<https://github.com/GetTako/tako/blob/main/contracts/events.go#L52-L55>)
+## type [StateChangedEvent](<https://github.com/takoterm/tako/blob/main/contracts/events.go#L52-L55>)
 
 StateChangedEvent is the structured payload for [EventStateChanged](<#EventStateChanged>).
 
@@ -720,7 +720,7 @@ type StateChangedEvent struct {
 ```
 
 <a name="StateManager"></a>
-## type [StateManager](<https://github.com/GetTako/tako/blob/main/contracts/state.go#L9-L31>)
+## type [StateManager](<https://github.com/takoterm/tako/blob/main/contracts/state.go#L9-L31>)
 
 StateManager defines an in\-memory reactive state store.
 
@@ -751,7 +751,7 @@ type StateManager interface {
 ```
 
 <a name="StateObserver"></a>
-## type [StateObserver](<https://github.com/GetTako/tako/blob/main/contracts/state.go#L46-L53>)
+## type [StateObserver](<https://github.com/takoterm/tako/blob/main/contracts/state.go#L46-L53>)
 
 StateObserver provides a fluent API for subscribing to state changes.
 
@@ -767,7 +767,7 @@ type StateObserver interface {
 ```
 
 <a name="StateProducer"></a>
-## type [StateProducer](<https://github.com/GetTako/tako/blob/main/contracts/state.go#L34-L43>)
+## type [StateProducer](<https://github.com/takoterm/tako/blob/main/contracts/state.go#L34-L43>)
 
 StateProducer provides a fluent API for publishing state changes.
 
@@ -785,7 +785,7 @@ type StateProducer interface {
 ```
 
 <a name="ThemeManager"></a>
-## type [ThemeManager](<https://github.com/GetTako/tako/blob/main/contracts/theme.go#L4-L16>)
+## type [ThemeManager](<https://github.com/takoterm/tako/blob/main/contracts/theme.go#L4-L16>)
 
 ThemeManager defines an agnostic theming engine.
 
@@ -806,7 +806,7 @@ type ThemeManager interface {
 ```
 
 <a name="UIManager"></a>
-## type [UIManager](<https://github.com/GetTako/tako/blob/main/contracts/ui.go#L47-L114>)
+## type [UIManager](<https://github.com/takoterm/tako/blob/main/contracts/ui.go#L47-L114>)
 
 UIManager is the single high\-level facade for all UI layer management in Tako. It wraps the low\-level Stack, Focus, Hook, and Key subsystems into one coherent entry point.
 
@@ -815,9 +815,9 @@ Three categories of operations live here:
 1. Base Layer — set the primary component for the application.
 2. Basic overlays — show/close arbitrary render layers.
 3. Component overlays — show self\-contained [Component](<#Component>) values that bundle their own render output and keybindings.
-4. Dialog sub\-namespace — common interaction primitives \(confirm, alert, prompt\) accessible via UIManager.Dialog.
+4. Dialog sub\-namespace — common interaction primitives \(confirm, alert, prompt\) accessible via \`UIManager.Dialog\(\)\`.
 
-All render operations are UI\-agnostic: render functions and Component.Render return any, so the framework never assumes a specific rendering library.
+All render operations are UI\-agnostic: render functions and \`Component.Render\(\)\` return any, so the framework never assumes a specific rendering library.
 
 Obtain via app.UI\(\) or ctx.UI\(\) inside a plugin.
 
@@ -912,7 +912,7 @@ type UIManager interface {
 ```
 
 <a name="UIRenderer"></a>
-## type [UIRenderer](<https://github.com/GetTako/tako/blob/main/contracts/renderer.go#L5-L8>)
+## type [UIRenderer](<https://github.com/takoterm/tako/blob/main/contracts/renderer.go#L5-L8>)
 
 UIRenderer defines the interface for rendering the UI.
 
@@ -924,7 +924,7 @@ type UIRenderer interface {
 ```
 
 <a name="ZoneKeyManager"></a>
-## type [ZoneKeyManager](<https://github.com/GetTako/tako/blob/main/contracts/component.go#L28-L38>)
+## type [ZoneKeyManager](<https://github.com/takoterm/tako/blob/main/contracts/component.go#L28-L38>)
 
 ZoneKeyManager is a scoped key\-registration helper returned by KeyManager.Zone\(\). It binds keys to a specific zone and stack level.
 
@@ -943,7 +943,7 @@ type ZoneKeyManager interface {
 ```
 
 <a name="ZoneMouseManager"></a>
-## type [ZoneMouseManager](<https://github.com/GetTako/tako/blob/main/contracts/component.go#L89-L97>)
+## type [ZoneMouseManager](<https://github.com/takoterm/tako/blob/main/contracts/component.go#L89-L97>)
 
 ZoneMouseManager is a scoped mouse\-registration helper returned by MouseManager.Zone\(\).
 

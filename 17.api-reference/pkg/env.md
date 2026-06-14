@@ -7,10 +7,10 @@ navigation:
 # env
 
 ```go
-import "gettako.dev/tako/pkg/support/env"
+import "gettako.dev/tako/pkg/env"
 ```
 
-Package env provides environment detection for the Tako framework.
+Package env provides environment detection utilities for the public API.
 
 ## Index
 
@@ -19,16 +19,16 @@ Package env provides environment detection for the Tako framework.
 
 
 <a name="IsDevelopmentMode"></a>
-## func [IsDevelopmentMode](<https://github.com/GetTako/tako/blob/main/pkg/support/env/detect.go#L14>)
+## func [IsDevelopmentMode](<https://github.com/takoterm/tako/blob/main/pkg/env/detect.go#L8>)
 
 ```go
 func IsDevelopmentMode() bool
 ```
 
-IsDevelopmentMode reports whether the app is running in development mode \(via \`go run\`, or with TAKO\_ENV=development\). This is the single source of truth for dev\-mode detection across the framework.
+IsDevelopmentMode reports whether the app is running in development mode. It delegates to the internal implementation which serves as the single source of truth.
 
 <a name="ResolveAppMeta"></a>
-## func [ResolveAppMeta](<https://github.com/GetTako/tako/blob/main/pkg/support/env/detect.go#L41>)
+## func [ResolveAppMeta](<https://github.com/takoterm/tako/blob/main/pkg/env/detect.go#L13>)
 
 ```go
 func ResolveAppMeta() (string, string)

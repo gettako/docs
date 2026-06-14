@@ -24,7 +24,7 @@ Package tako provides the main entry points for the Tako framework.
 
 
 <a name="Bind"></a>
-## func [Bind](<https://github.com/GetTako/tako/blob/main/container.go#L32>)
+## func [Bind](<https://github.com/takoterm/tako/blob/main/container.go#L32>)
 
 ```go
 func Bind[T any](c contracts.Container, impl T)
@@ -37,7 +37,7 @@ tako.Bind[contracts.Logger](app.Container(), &myLogger{})
 ```
 
 <a name="BindLazy"></a>
-## func [BindLazy](<https://github.com/GetTako/tako/blob/main/container.go#L43>)
+## func [BindLazy](<https://github.com/takoterm/tako/blob/main/container.go#L43>)
 
 ```go
 func BindLazy[T any](c contracts.Container, factory func() (any, error))
@@ -52,7 +52,7 @@ tako.BindLazy[contracts.Database](app.Container(), func() (any, error) {
 ```
 
 <a name="BindTransient"></a>
-## func [BindTransient](<https://github.com/GetTako/tako/blob/main/container.go#L54>)
+## func [BindTransient](<https://github.com/takoterm/tako/blob/main/container.go#L54>)
 
 ```go
 func BindTransient[T any](c contracts.Container, factory func() (any, error))
@@ -67,7 +67,7 @@ tako.BindTransient[contracts.Validator](app.Container(), func() (any, error) {
 ```
 
 <a name="MustResolve"></a>
-## func [MustResolve](<https://github.com/GetTako/tako/blob/main/container.go#L20>)
+## func [MustResolve](<https://github.com/takoterm/tako/blob/main/container.go#L20>)
 
 ```go
 func MustResolve[T any](c contracts.Container) T
@@ -80,7 +80,7 @@ bus := tako.MustResolve[contracts.EventBus](app.Container())
 ```
 
 <a name="NewApp"></a>
-## func [NewApp](<https://github.com/GetTako/tako/blob/main/tako.go#L48>)
+## func [NewApp](<https://github.com/takoterm/tako/blob/main/tako.go#L48>)
 
 ```go
 func NewApp() *foundation.Application
@@ -89,7 +89,7 @@ func NewApp() *foundation.Application
 NewApp is a convenience wrapper to create a new Foundation Application.
 
 <a name="Resolve"></a>
-## func [Resolve](<https://github.com/GetTako/tako/blob/main/container.go#L9>)
+## func [Resolve](<https://github.com/takoterm/tako/blob/main/container.go#L9>)
 
 ```go
 func Resolve[T any](c contracts.Container) (T, error)
@@ -102,7 +102,7 @@ db, err := tako.Resolve[contracts.Database](app.Container())
 ```
 
 <a name="Run"></a>
-## func [Run](<https://github.com/GetTako/tako/blob/main/tako.go#L17>)
+## func [Run](<https://github.com/takoterm/tako/blob/main/tako.go#L17>)
 
 ```go
 func Run(app *foundation.Application, args ...string) error
